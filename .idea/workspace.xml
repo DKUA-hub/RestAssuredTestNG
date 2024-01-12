@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a271030-f623-4e02-9d90-afc7e1dc180b" name="Changes" comment="Added tests for each endpoint">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Bookingdates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2a271030-f623-4e02-9d90-afc7e1dc180b" name="Changes" comment="Improved tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Bookingid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Bookingdates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Bookingdates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CreateBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CreateBookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GetBookingIdsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GetBookingIdsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GetBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GetBookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PatchBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PatchBookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/RestAssuredHealthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/RestAssuredHealthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704980360062</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Improved tests">
+      <option name="closed" value="true" />
+      <created>1705062218374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705062218375</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,16 +199,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added tests for each endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for each endpoint" />
+    <MESSAGE value="Improved tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java</url>
           <line>30</line>
@@ -222,6 +219,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java</url>
           <line>42</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/CreateBookingTest.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
