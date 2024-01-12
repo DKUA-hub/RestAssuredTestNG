@@ -12,29 +12,23 @@ public class DeleteBookingTest extends BaseTest{
     public void deleteBooking(){
         //Plan
         //1. Create a booking for the test
-        Response response = makeRequest();
-        response.print();
-
-        int bookingid = response.jsonPath().getInt("bookingid");
-
-        response = RestAssured.get("https://restful-booker.herokuapp.com/booking/" + bookingid);
-        response.print();
+        Response responseCreate = makeRequest();
+        spec.pathParam("bookingid", responseCreate.jsonPath().getInt("bookingid"));
 
         //2. Delete it
         Response responseDelete = RestAssured
-                .given()
+                .given(spec)
                 .auth()
                 .preemptive()
                 .basic("admin", "password123")
-                .delete("https://restful-booker.herokuapp.com/booking/" + bookingid);
+                .delete("/booking/{bookingid}");
 
         //3. Test response status code
         Assert.assertEquals(responseDelete.getStatusCode(), 201, "Status code is not 201");
 
         //4. Check that there is no booking created in #1.
-        response = RestAssured.get("https://restful-booker.herokuapp.com/booking/" + bookingid);
-        response.print();
-        Assert.assertEquals(response.getStatusCode(), 404, "Status code is not 404");
-        Assert.assertEquals(((RestAssuredResponseImpl) response).getContent(), "Not Found", "The response contains some data but it shouldn't");
+        Response responseGet = RestAssured.get("/" + responseCreate.jsonPath().getInt("bookingid"));
+        Assert.assertEquals(responseGet.getStatusCode(), 404, "Status code is not 404");
+        Assert.assertEquals(((RestAssuredResponseImpl) responseGet).getContent(), "Not Found", "The response contains some data but it shouldn't");
     }
 }

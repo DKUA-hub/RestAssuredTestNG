@@ -12,11 +12,8 @@ public class PatchBookingTest extends BaseTest{
     @Test
     public void patchBooking(){
 
-        //Plan
-        //1. Create a booking
         Response responseCreate = makeRequest();
-        responseCreate.print();
-        int bookingid = responseCreate.jsonPath().getInt("bookingid");
+        spec.pathParam("bookingid", responseCreate.jsonPath().getInt("bookingid"));
 
         //2. Prepare updated json
         JSONObject body = new JSONObject();
@@ -29,13 +26,13 @@ public class PatchBookingTest extends BaseTest{
 
         //3. Send a  request and get response
         Response responsePatch = RestAssured
-                .given()
+                .given(spec)
                 .auth()
                 .preemptive()
                 .basic("admin","password123")
                 .contentType(ContentType.JSON)
                 .body(body.toString())
-                .patch("https://restful-booker.herokuapp.com/booking/" + bookingid);
+                .patch("/booking/{bookingid}");
         responsePatch.print();
 
         //4. Test status code

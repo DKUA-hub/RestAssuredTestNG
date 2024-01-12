@@ -2,18 +2,23 @@ package org.example;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.builder.RequestSpecBuilder;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class GetBookingIdsTest {
+import static io.restassured.RestAssured.given;
+
+public class GetBookingIdsTest extends BaseTest{
     @Test
-    public static void getBookingIdsWithoutFiltering(){
+    public void getBookingIdsWithoutFiltering(){
         // Plan
         // 1. Make a request
-        Response response = RestAssured.get("https://restful-booker.herokuapp.com/booking");
-        response.print();
+        Response response = RestAssured
+                .given(spec)
+                .get();
 
         // 2. Test response status
         Assert.assertEquals(response.getStatusCode(), 200, "Actual status code is not 200");

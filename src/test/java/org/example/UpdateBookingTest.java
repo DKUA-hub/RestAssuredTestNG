@@ -14,8 +14,7 @@ public class UpdateBookingTest extends BaseTest{
         //Plan
         //1. Create booking
         Response responseCreate = makeRequest();
-        responseCreate.print();
-        int bookingid = responseCreate.jsonPath().getInt("bookingid");
+        spec.pathParam("bookingid",responseCreate.jsonPath().getInt("bookingid"));
 
         //2. Update booking
         JSONObject body = new JSONObject();
@@ -32,14 +31,13 @@ public class UpdateBookingTest extends BaseTest{
 
         //2. Send a request and get response
         Response responseUpdate = RestAssured
-                .given()
+                .given(spec)
                 .auth()
                 .preemptive()
                 .basic("admin", "password123")
                 .contentType(ContentType.JSON)
                 .body(body.toString())
-                .put("https://restful-booker.herokuapp.com/booking/" + bookingid);
-        responseUpdate.print();
+                .put("/booking/{bookingid}");
 
         //3. Check response status code
         Assert.assertEquals(responseUpdate.getStatusCode(), 200, "Status code is not 200");

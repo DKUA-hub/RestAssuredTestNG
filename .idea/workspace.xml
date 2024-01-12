@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a271030-f623-4e02-9d90-afc7e1dc180b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CreateBookingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/GetBookingIdsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/GetBookingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PatchBookingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/RestAssuredHealthTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java" afterDir="false" />
+    <list default="true" id="2a271030-f623-4e02-9d90-afc7e1dc180b" name="Changes" comment="Added tests for each endpoint">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Bookingdates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CreateBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CreateBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GetBookingIdsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GetBookingIdsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GetBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GetBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PatchBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PatchBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/RestAssuredHealthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/RestAssuredHealthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2alYeY1Pg2d3hMF9MKAEfHZMnuM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Dmytro/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar",
-    "onboarding.tips.debug.path": "D:/java/RestAssuretTestNG/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dmytro/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/java/RestAssuretTestNG/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DeleteBookingTest.deleteBooking">
+  <component name="RunManager" selected="TestNG.CreateBookingTest.createBookingWithPOJOTest">
     <configuration name="CreateBookingTest.createBookingTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restassured-testng" />
       <extension name="coverage">
@@ -85,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteBookingTest.deleteBooking" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateBookingTest.createBookingWithPOJOTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restassured-testng" />
       <extension name="coverage">
         <pattern>
@@ -94,8 +92,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeleteBookingTest" />
-      <option name="METHOD_NAME" value="deleteBooking" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CreateBookingTest" />
+      <option name="METHOD_NAME" value="createBookingWithPOJOTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -103,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetBookingTest.getBookingDetailsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetBookingTest.getBookingWithFilterTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restassured-testng" />
       <extension name="coverage">
         <pattern>
@@ -113,7 +111,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GetBookingTest" />
-      <option name="METHOD_NAME" value="getBookingDetailsTest" />
+      <option name="METHOD_NAME" value="getBookingWithFilterTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatchBookingTest.patchBooking" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RestAssuredHealthTest.headersAndCookiesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restassured-testng" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +128,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PatchBookingTest" />
-      <option name="METHOD_NAME" value="patchBooking" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RestAssuredHealthTest" />
+      <option name="METHOD_NAME" value="headersAndCookiesTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -159,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DeleteBookingTest.deleteBooking" />
-        <item itemvalue="TestNG.PatchBookingTest.patchBooking" />
+        <item itemvalue="TestNG.CreateBookingTest.createBookingWithPOJOTest" />
+        <item itemvalue="TestNG.RestAssuredHealthTest.headersAndCookiesTest" />
         <item itemvalue="TestNG.UpdateBookingTest.updateBooking" />
+        <item itemvalue="TestNG.GetBookingTest.getBookingWithFilterTest" />
         <item itemvalue="TestNG.CreateBookingTest.createBookingTest" />
-        <item itemvalue="TestNG.GetBookingTest.getBookingDetailsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +174,15 @@
       <option name="presentableId" value="Default" />
       <updated>1704894732974</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added tests for each endpoint">
+      <option name="closed" value="true" />
+      <created>1704980360062</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704980360062</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +196,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added tests for each endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests for each endpoint" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -199,8 +210,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeleteBookingTest.java</url>
-          <line>36</line>
+          <line>30</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/UpdateBookingTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

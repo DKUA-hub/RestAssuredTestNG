@@ -8,18 +8,16 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-public class GetBookingTest {
+public class GetBookingTest extends BaseTest{
     @Test
-    public static void getBookingDetailsTest(){
-        // Plan
-        // 1. Make a request
-        Response response = RestAssured.get("https://restful-booker.herokuapp.com/booking/10");
-        response.print();
+    public void getBookingWithoutFilteringTest(){
 
-        // 2. Test response status
+        Response response = RestAssured
+            .given(spec)
+            .get("/booking/10");
+
         Assert.assertEquals(response.getStatusCode(), 200, "Actual status code is not 200");
 
-        // 3. Verify that returned response contains expected values
         SoftAssert softAssert = new SoftAssert();
 
         String firstname = response.jsonPath().getString("firstname");
@@ -50,5 +48,19 @@ public class GetBookingTest {
         softAssert.assertEquals(additionalneeds, additionalneedsExpected, "Additionalneeds mismatch");
 
         softAssert.assertAll();
+    }
+
+    @Test
+    public void getBookingWithFilterTest(){
+        Response response = makeRequest();
+
+        spec.queryParam("firstname", "Connie");
+        spec.queryParam("lastname", "Applegate");
+        Response responseGet = RestAssured
+                .given(spec)
+                .get("/booking");
+        response.print();
+
+        Assert.assertEquals(response.getStatusCode(), 200, "Status code is not 200");
     }
 }

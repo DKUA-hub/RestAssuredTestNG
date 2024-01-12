@@ -1,12 +1,22 @@
 package org.example;
 
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
+    protected RequestSpecification spec;
+    @BeforeTest
+    protected void setUp(){
+        spec = new RequestSpecBuilder()
+                .setBaseUri("https://restful-booker.herokuapp.com")
+                .build();
+    }
     protected Response makeRequest() {
         JSONObject body = new JSONObject();
         JSONObject bookingdates = new JSONObject();
@@ -21,11 +31,10 @@ public class BaseTest {
         body.put("additionalneeds", "BlackJack and girls");
 
         //2. Send request and get response
-        Response response = RestAssured
-                .given()
+        return RestAssured
+                .given(spec)
                 .contentType(ContentType.JSON)
                 .body(body.toString())
-                .post("https://restful-booker.herokuapp.com/booking");
-        return response;
+                .post("/booking");
     }
 }
